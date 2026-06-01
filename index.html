@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rishikesh Achari — VLSI Engineer & Full Stack Developer</title>
-  <meta name="description" content="Aspiring VLSI Engineer and Full Stack Developer. ECE student at JNTUA (2027). Building efficient systems bridging hardware and software with VLSI design, Python, React, and modern web technologies." />
+  <meta name="description" content="Aspiring VLSI Engineer and Full Stack Developer. ECE student at JNTUA (2027). Building efficient systems bridging hardware and software with VLSI design, Python, React, and Web Development." />
   <meta name="keywords" content="VLSI Engineer, Full Stack Developer, Python, React, Electronics, JNTUA, Semiconductor, Web Development" />
   <meta name="author" content="Rishikesh Achari" />
   <meta property="og:title" content="Rishikesh Achari — VLSI Engineer & Full Stack Developer" />
@@ -33,6 +33,11 @@
       --font-serif: 'Instrument Serif', serif;
       --nav-bg: rgba(10,10,15,0.7);
       --hero-outline: rgba(255,255,255,0.25);
+      /* Maroon & Gold Theme */
+      --maroon: #800020;
+      --maroon-light: #a01830;
+      --gold: #d4af37;
+      --gold-light: #e8c547;
     }
  
     /* ── Professional Light Mode ──────────────────────────────────── */
@@ -149,7 +154,7 @@
     body::before {
       content: '';
       position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='256' height='256' fill='%23000'/%3E%3Crect width='256' height='256' fill='%23fff' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
       opacity: 0.025;
       pointer-events: none;
       z-index: 0;
@@ -565,6 +570,11 @@
     .project-thumb-crm {
       background: linear-gradient(135deg, #1e3c72, #2a5298, #00b4db);
     }
+    /* Maroon & Gold theme for jewellery website */
+    .project-thumb-jewellery {
+      background: linear-gradient(135deg, #800020, #a01830, #d4af37);
+      box-shadow: inset 0 0 20px rgba(212,175,55,0.2);
+    }
     .project-thumb::after {
       content: '';
       position: absolute; inset: 0;
@@ -598,7 +608,7 @@
       border-radius: 3px;
       color: var(--muted);
       text-decoration: none;
-      transition: border-color 0.2s, color 0.2s;
+      transition: border-color 0.2s, color 0.2s, background-color 0.2s;
     }
     .project-link:hover { border-color: var(--accent); color: var(--accent); }
     .project-link.primary {
@@ -608,6 +618,17 @@
       font-weight: 600;
     }
     .project-link.primary:hover { opacity: 0.85; color: #0a0a0f; }
+    
+    /* Special styling for jewellery project GitHub link */
+    .project-card:has(.project-thumb-jewellery) .project-link.primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-color: var(--gold);
+      color: var(--maroon);
+    }
+    .project-card:has(.project-thumb-jewellery) .project-link.primary:hover {
+      box-shadow: 0 4px 12px rgba(212,175,55,0.4);
+      color: var(--maroon);
+    }
  
     #contact { background: var(--bg); }
     .contact-layout {
@@ -790,9 +811,9 @@
     <div class="about-layout">
       <div class="about-text reveal">
         <h2 class="section-title">Aspiring VLSI Engineer &amp;<br /><em style="font-family: var(--font-serif); font-style: italic; color: var(--accent2);">Full Stack Developer.</em></h2>
-        <p style="margin-top:1.5rem;">I'm an <strong>Electronics &amp; Communication Engineering</strong> student at Anantha Lakshmi Institute of Technology &amp; Sciences (JNTUA), Anantapur — graduating in 2027, with a strong interest in both hardware and software development.</p>
-        <p>I have a deep passion for <strong>VLSI design and semiconductor technologies</strong>, combined with expertise in <strong>full stack development</strong> using modern web technologies. My journey spans from <strong>Python</strong> backend development to <strong>React</strong> front-end applications, with hands-on experience in building scalable web applications.</p>
-        <p>My goal is to <strong>bridge hardware and software</strong> by building efficient, scalable systems that leverage both my electronics background and software development skills. I'm a continuous learner focused on practical implementation and problem-solving, actively seeking opportunities to contribute to innovative projects in both VLSI and web development domains.</p>
+        <p style="margin-top:1.5rem;">I'm an <strong>Electronics &amp; Communication Engineering</strong> student at Anantha Lakshmi Institute of Technology &amp; Sciences (JNTUA), Anantapur — graduating in 2027. My passion lies in bridging hardware and software through innovative projects and continuous learning.</p>
+        <p>I have a deep passion for <strong>VLSI design and semiconductor technologies</strong>, combined with expertise in <strong>full stack development</strong> using modern web technologies. My journey involves building applications that showcase both technical depth and creative design.</p>
+        <p>My goal is to <strong>bridge hardware and software</strong> by building efficient, scalable systems that leverage both my electronics background and software development skills. I'm a continuous learner and always exploring emerging technologies in the tech ecosystem.</p>
  
         <div class="about-stats">
           <div class="stat-box">
@@ -800,7 +821,7 @@
             <div class="stat-label">Graduating</div>
           </div>
           <div class="stat-box">
-            <div class="stat-num">4+</div>
+            <div class="stat-num">5+</div>
             <div class="stat-label">Projects Built</div>
           </div>
           <div class="stat-box">
@@ -863,7 +884,7 @@
           <div class="edu-school">Full Stack Developer Intern</div>
           <div class="edu-detail">Future Interns<br />Online Internship</div>
           <span class="edu-grade">1 Month · Completed</span>
-          <p style="margin-top:0.8rem;color:var(--muted);font-size:0.78rem;line-height:1.7;">Worked as a Full Stack Developer Intern, gained hands-on experience in building scalable web applications, handling both front-end and back-end development, and understanding real-world software development workflows.</p>
+          <p style="margin-top:0.8rem;color:var(--muted);font-size:0.78rem;line-height:1.7;">Worked as a Full Stack Developer Intern, gained hands-on experience in building scalable web applications, integrating frontend and backend technologies, and collaborating with cross-functional teams.</p>
         </div>
       </div>
     </div>
@@ -961,13 +982,31 @@
     <h2 class="section-title reveal">Things I've built</h2>
  
     <div class="projects-grid">
-      <!-- NEW PROJECT: Mini CRM -->
+      <!-- Jewellery Website Project -->
       <div class="project-card reveal">
+        <div class="project-thumb project-thumb-jewellery">💎</div>
+        <div class="project-body">
+          <div class="project-type">Frontend · HTML / CSS / JavaScript</div>
+          <div class="project-title">Elegant Jewellery Website</div>
+          <div class="project-desc">A fully responsive, elegant jewellery e-commerce website built with clean HTML, CSS, and vanilla JavaScript. Features a beautiful maroon and gold color theme, product showcase, interactive elements, and smooth user experience across all devices.</div>
+          <div class="project-footer">
+            <a href="https://github.com/rishikeshachari/FUTURE_FS_03.git" target="_blank" class="project-link primary">GitHub Repo →</a>
+            <a href="#" target="_blank" class="project-link">Live Demo</a>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Responsive</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mini CRM Project -->
+      <div class="project-card reveal" style="transition-delay:0.05s">
         <div class="project-thumb project-thumb-crm">📊</div>
         <div class="project-body">
           <div class="project-type">Full Stack · React + Flask</div>
           <div class="project-title">Mini CRM System</div>
-          <div class="project-desc">A Customer Relationship Management system built with React frontend and Flask backend. Features include contact management, lead tracking, customer data visualization, and REST API integration. Demonstrates full-stack capabilities with modern web technologies.</div>
+          <div class="project-desc">A Customer Relationship Management system built with React frontend and Flask backend. Features include contact management, lead tracking, customer data visualization, and comprehensive CRUD operations.</div>
           <div class="project-footer">
             <a href="https://github.com/rishikeshachari/FUTURE_FS_02.git" target="_blank" class="project-link primary">GitHub Repo →</a>
             <a href="#" target="_blank" class="project-link">Live Demo</a>
@@ -979,12 +1018,13 @@
         </div>
       </div>
 
-      <div class="project-card reveal">
+      <!-- Student Management System -->
+      <div class="project-card reveal" style="transition-delay:0.1s">
         <div class="project-thumb project-thumb-python">🐍</div>
         <div class="project-body">
           <div class="project-type">Python · Console Application</div>
           <div class="project-title">Student Management System</div>
-          <div class="project-desc">A fully functional, menu-driven console application to manage student records — add, view, search, update, and delete. Built in Python using dictionaries and lists, demonstrating core CS fundamentals: data structures, functions, loops, and user input handling.</div>
+          <div class="project-desc">A fully functional, menu-driven console application to manage student records — add, view, search, update, and delete. Built in Python using dictionaries and lists with persistent file storage.</div>
           <div class="project-footer">
             <a href="https://github.com/rishikeshachari/student-management-system" target="_blank" class="project-link primary">GitHub Repo →</a>
             <span class="tag">Python</span>
@@ -994,234 +1034,150 @@
         </div>
       </div>
  
+      <!-- Hardware Project -->
       <div class="project-card reveal" style="transition-delay:0.15s">
         <div class="project-thumb project-thumb-hardware">⛈️</div>
         <div class="project-body">
           <div class="project-type">Hardware · Embedded Systems</div>
-          <div class="project-title">Sky Shield — Rain Protection System</div>
-          <div class="project-desc">A microcontroller-based intelligent rain detection system using Arduino UNO, a digital rain sensor, and an L293D motor driver. The system automates roof control with DC motors via PWM signal modulation and bidirectional motor control — providing real-time environmental response and sustainable rainwater management.</div>
+          <div class="project-title">Rainfall Monitoring System</div>
+          <div class="project-desc">An IoT-based rainfall monitoring system built with Arduino, rain sensors, and data logging. Demonstrates hands-on embedded systems knowledge and sensor integration for real-world environmental monitoring.</div>
           <div class="project-footer">
-            <a href="https://github.com/rishikeshachari/sky-shield" target="_blank" class="project-link primary">GitHub Repo →</a>
+            <a href="#" target="_blank" class="project-link primary">Project Details →</a>
             <span class="tag">Arduino</span>
-            <span class="tag">L293D</span>
-            <span class="tag">PWM</span>
-          </div>
-        </div>
-      </div>
- 
-      <div class="project-card reveal" style="transition-delay:0.3s">
-        <div class="project-thumb project-thumb-web">🌐</div>
-        <div class="project-body">
-          <div class="project-type">Web · Front-End</div>
-          <div class="project-title">This Portfolio Website</div>
-          <div class="project-desc">This very website — designed and built from scratch using HTML, CSS, and JavaScript. Features smooth animations, scroll-reveal effects, and a fully responsive layout. Created as part of the Future Interns program.</div>
-          <div class="project-footer">
-            <a href="https://github.com/rishikeshachari/portfolio" target="_blank" class="project-link primary">GitHub Repo →</a>
-            <a href="#" target="_blank" class="project-link">Live Demo</a>
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
+            <span class="tag">IoT</span>
+            <span class="tag">Sensors</span>
+            <span class="tag">Embedded C</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
- 
+
 <section id="contact">
   <div class="section-inner">
-    <p class="section-label reveal">05 / Contact</p>
     <div class="contact-layout">
-      <div class="reveal">
-        <h2 class="contact-heading">Let's work<br /><em>together.</em></h2>
-        <p class="contact-desc">
-          I'm actively seeking opportunities in software development, web development, 
-          full-stack roles, freelance projects, or any role where I can contribute and grow.
-          Whether it's a project, opportunity, or just a conversation — I'm here.
-        </p>
- 
-        <div class="contact-links">
-          <a href="mailto:acharirishikesh@gmail.com" class="contact-item">
-            <span class="contact-item-icon">✉️</span>
-            <div class="contact-item-info">
-              <div class="contact-item-label">Email</div>
-              <div class="contact-item-val">acharirishikesh@gmail.com</div>
-            </div>
-          </a>
-          <a href="tel:+918688212046" class="contact-item">
-            <span class="contact-item-icon">📱</span>
-            <div class="contact-item-info">
-              <div class="contact-item-label">Phone</div>
-              <div class="contact-item-val">+91 86882 12046</div>
+      <div>
+        <p class="section-label reveal">05 / Get in Touch</p>
+        <h2 class="contact-heading reveal">Let's work <em>together</em></h2>
+        <p class="contact-desc reveal">I'm always excited to collaborate on interesting projects and connect with fellow developers, designers, and tech enthusiasts. Feel free to reach out through any of the channels below.</p>
+        
+        <div class="contact-links reveal">
+          <a href="https://github.com/rishikeshachari" target="_blank" rel="noopener" class="contact-item">
+            <div class="contact-item-icon">🔗</div>
+            <div>
+              <div class="contact-item-label">GitHub</div>
+              <div class="contact-item-val">@rishikeshachari</div>
             </div>
           </a>
           <a href="https://www.linkedin.com/in/rishikesh-achari" target="_blank" rel="noopener" class="contact-item">
-            <span class="contact-item-icon">🔗</span>
-            <div class="contact-item-info">
+            <div class="contact-item-icon">💼</div>
+            <div>
               <div class="contact-item-label">LinkedIn</div>
-              <div class="contact-item-val">linkedin.com/in/rishikesh-achari</div>
+              <div class="contact-item-val">Rishikesh Achari</div>
             </div>
           </a>
-          <a href="https://github.com/rishikeshachari" target="_blank" rel="noopener" class="contact-item">
-            <span class="contact-item-icon">🐙</span>
-            <div class="contact-item-info">
-              <div class="contact-item-label">GitHub</div>
-              <div class="contact-item-val">github.com/rishikeshachari</div>
+          <a href="mailto:rishikeshachari@example.com" class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-val">Let's connect</div>
             </div>
           </a>
         </div>
       </div>
- 
-      <div class="reveal" style="transition-delay:0.15s">
-        <p class="section-label" style="margin-bottom:1.5rem;">Send a Message</p>
-        <div class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label class="form-label" for="name">Your Name</label>
-            <input class="form-input" type="text" id="name" placeholder="John Doe" />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="email">Email Address</label>
-            <input class="form-input" type="email" id="email" placeholder="john@company.com" />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="subject">Subject</label>
-            <input class="form-input" type="text" id="subject" placeholder="Opportunity / Collaboration" />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="message">Message</label>
-            <textarea class="form-textarea" id="message" placeholder="Tell me about the opportunity..."></textarea>
-          </div>
-          <div id="form-status"></div>
-          <button class="form-submit" onclick="handleSubmit()">Send Message →</button>
+
+      <form class="contact-form reveal" style="transition-delay:0.1s" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="name">Full Name</label>
+          <input class="form-input" id="name" type="text" placeholder="Your name" required />
         </div>
-      </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" id="email" type="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" placeholder="Tell me about your project or idea..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+        <div id="form-status"></div>
+      </form>
     </div>
   </div>
 </section>
- 
+
 <footer>
   <div class="footer-logo">RA</div>
-  <div style="color:var(--muted);font-size:0.75rem;">Rishikesh Achari · JNTUA 2027 · Anantapur, Andhra Pradesh</div>
   <div class="footer-links">
-    <a href="https://github.com/rishikeshachari" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/rishikesh-achari" target="_blank">LinkedIn</a>
-    <a href="mailto:acharirishikesh@gmail.com">Email</a>
+    <a href="https://github.com/rishikeshachari" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/rishikesh-achari" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="#hero">Back to Top</a>
   </div>
 </footer>
- 
+
 <script>
-  const toggleBtn   = document.getElementById('theme-toggle');
-  const toggleIcon  = toggleBtn.querySelector('.toggle-icon');
-  const toggleLabel = toggleBtn.querySelector('.toggle-label');
- 
+  // Theme Toggle
   function toggleTheme() {
-    const isLight = document.body.classList.toggle('light');
-    toggleIcon.textContent  = isLight ? '☀️' : '🌙';
-    toggleLabel.textContent = isLight ? 'Light' : 'Dark';
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    const body = document.body;
+    body.classList.toggle('light');
+    localStorage.setItem('theme', body.classList.contains('light') ? 'light' : 'dark');
+    updateThemeToggle();
   }
- 
-  if (localStorage.getItem('theme') === 'light') {
+
+  function updateThemeToggle() {
+    const toggle = document.getElementById('theme-toggle');
+    const icon = toggle.querySelector('.toggle-icon');
+    const label = toggle.querySelector('.toggle-label');
+    const isLight = document.body.classList.contains('light');
+    icon.textContent = isLight ? '☀️' : '🌙';
+    label.textContent = isLight ? 'Light' : 'Dark';
+  }
+
+  // Initialize theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
     document.body.classList.add('light');
-    toggleIcon.textContent  = '☀️';
-    toggleLabel.textContent = 'Light';
   }
- 
+  updateThemeToggle();
+
+  // Scroll Reveal Animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1 });
- 
+  }, observerOptions);
+
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
- 
-  function handleSubmit() {
-    const name    = document.getElementById('name').value.trim();
-    const email   = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const status  = document.getElementById('form-status');
- 
-    if (!name || !email || !message) {
-      status.style.color = '#ff6b6b';
-      status.textContent = '⚠ Please fill in all required fields.';
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      status.style.color = '#ff6b6b';
-      status.textContent = '⚠ Please enter a valid email address.';
-      return;
-    }
- 
-    status.style.color = 'var(--accent)';
-    status.textContent = '✓ Message sent! I\'ll get back to you soon.';
- 
-    ['name','email','subject','message'].forEach(id => {
-      document.getElementById(id).value = '';
-    });
- 
-    setTimeout(() => { status.textContent = ''; }, 5000);
+
+  // Form Submission
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const statusEl = document.getElementById('form-status');
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Display success message
+    statusEl.textContent = '✓ Message received! I'll get back to you soon.';
+    statusEl.style.color = 'var(--accent)';
+
+    // Reset form
+    event.target.reset();
+
+    // Clear message after 5 seconds
+    setTimeout(() => {
+      statusEl.textContent = '';
+    }, 5000);
   }
- 
-  const navLogo = document.querySelector('.nav-logo');
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  
-  let lastScrollY = window.scrollY;
-  let logoAnimated = false;
-  let ticking = false;
-
-  function animateLogoText() {
-    if (logoAnimated) return;
-    logoAnimated = true;
-    
-    const originalText = 'RA';
-    const targetText = 'Rishikesh Achari';
-    let currentIndex = 0;
-    
-    function animate() {
-      if (currentIndex <= targetText.length) {
-        navLogo.textContent = targetText.substring(0, currentIndex) + originalText.substring(currentIndex);
-        currentIndex++;
-        requestAnimationFrame(() => setTimeout(animate, 50));
-      } else {
-        navLogo.textContent = targetText;
-      }
-    }
-    animate();
-  }
-
-  function handleScroll() {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        const currentScrollY = window.scrollY;
-        
-        if (currentScrollY < lastScrollY && currentScrollY > 50 && !logoAnimated) {
-          animateLogoText();
-        }
-        
-        lastScrollY = currentScrollY;
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }
-
-  const navObs = new IntersectionObserver((entries) => {
-    const activeSection = entries.find(e => e.isIntersecting);
-    if (activeSection) {
-      const targetId = '#' + activeSection.id;
-      navLinks.forEach(link => {
-        link.style.color = link.getAttribute('href') === targetId ? 'var(--text)' : '';
-      });
-    }
-  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-
-  sections.forEach(section => navObs.observe(section));
-  window.addEventListener('scroll', handleScroll, { passive: true });
 </script>
+
 </body>
 </html>
